@@ -32,7 +32,7 @@ client | available | held | total | locked
 2 | 4.0 | 5.0 | 9.0 | true
 
 ## Design
-* Used a component based with a single thread. This leaves it open for the program to be updated to use a runtime, like Tokio, to implement concurrent tasks.
+* Used a component based with a single thread. This allows for updates to the program so we can implement concurrent threads using a runtime like Tokio.
 * The App struct has the state of the app, saves the CSV input file name entered in the comand line, and stores all the clients in an unorder data structure (hashmap).
 * The Client struct holds all the data important for an account like available balance, held balance, log of past transactions, and if the account is frozen.
 
